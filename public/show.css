@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+      box-sizing: border-box;
+      background-color: whitesmoke;
+  }
+  body{
+      padding:30px 60px 0px 60px;
+      background-color: var(whitesmoke);
+  }
+  .nav{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  background-color: whitesmoke;
+  }
+  .sections{
+      width: 50%;
+      background-color: whitesmoke;
+  }
+  .sections ul{
+  display: flex;
+  justify-content:space-evenly;
+  flex-direction: row;
+  align-items: center;
+  list-style-type:none;
+  }
+  .sections ul li{
+      color:#3F3F3F;
+  }
+  .sections ul li:hover{
+      color:#F72D57;
+      cursor: pointer;
+  }
+  .content{
+    height: 94%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: #3F3F3F;
+      background-color: whitesmoke;
+  }
+  .signup{
+      background-color: #F72D57;
+      color: white;
+      border-radius: 5%;
+      padding: 1%;
+      width: 20%;
+      border: #F72D57 solid 1px;
+  }
+  .text{
+      width: 54%;
+      padding-top: 10%;
+      height: 100%;
+  }
+  .text p{
+      width: 80%;
+      color: #3F3F3F;
+      line-height: 29px;
+  }
+  .title h1{
+    color: #F72D57;
+}
+.f_title h1{
+    color: white;
+    background-color: #F72D57;
+}
+.front,.second,.third{
+    padding: 0% 4%;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color:#F72D57;
+   width: 94vw;
+    height: 6vh;
+    padding: 5%;
+    margin-top: 20px;
+    }
+
+    .footer_sections{
+        width: 50%;
+        background-color: #F72D57;
+    }
+    .footer_sections ul{
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type:none;
+    background-color: #F72D57;
+    }
+    .footer_sections ul li{
+        color:#3F3F3F;
+        background-color: #F72D57;
+    }
+    .footer_sections ul li:hover{
+        color:#F72D57;
+        cursor: pointer;
+    }

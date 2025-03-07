@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/share.css">
+    <title>Share Your Recipe</title>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="image">
+            <img src="view-3d-people-cooking-kitchen.jpg" style="height: 100%;" alt="">
+        </div>
+        <div class="content">
+            <h1 style="margin-bottom: 30px;">Share Your Recipe</h1>
+            <form action="/share-recipe" method="POST">
+                <div>
+                    <label for="recipeName">Recipe Name:</label>
+                    <br>
+                    <br>
+                    <input type="text" id="recipeName" name="recipeName" required>
+                </div>
+    
+                <div>
+                    <label for="cuisineType">Cuisine Type:</label>
+                    <br>
+                    <br>
+                    <input type="text" id="cuisineType" name="cuisineType" required>
+                </div>
+    
+                <div>
+                    <label for="ingredients">Ingredients (separated by commas):</label>
+                    <br>
+                    <br>
+                    <textarea id="ingredients" name="ingredients" rows="4" cols="40" required></textarea>
+                </div>
+    
+                <div>
+                    <label for="preparationSteps">Preparation Steps:</label>
+                    <br>
+                    <br>
+                    <textarea id="preparationSteps" name="preparationSteps" rows="6" cols="40" required></textarea>
+                </div>
+    
+                <div>
+                    <label for="photo">Image Link (URL):</label>
+                    <br>
+                    <br>
+                    <input type="url" id="photo" name="photo" required>
+                </div>
+                <br>
+                <button type="submit" class="submitbtn">Submit Recipe</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

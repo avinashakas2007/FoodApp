@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+      box-sizing: border-box;
+      background-color: whitesmoke;
+  }
+  body{
+      padding:30px 60px 0px 60px;
+      background-color: var(whitesmoke);
+  }
+  .container{
+    height: 95vh;
+    width: 95vw;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .image{
+    height: 100%;
+    width: 48%;
+  }
+  .content{
+    height: 100%;
+    width: 48%;
+  }
+  .content form div{
+    margin-bottom: 10px;
+  }
+  .submitbtn{
+        width: 22%;
+        padding: 2%;
+        color: whitesmoke;
+        background-color: #F72D57;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+  .content form div input{
+    height: 35px;
+    width: 70%;
+    border-radius: 8px;
+  }
+  .content form div textarea{
+    border-radius: 8px;
+    border: solid black 2px;
+  }

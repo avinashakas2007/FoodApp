@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blog_style.css">
+    <title>Tastee - Share Your Favorite Recipes</title>
+</head>
+<body>
+    <div class="front" style="color: whitesmoke;">
+        <div class="nav">
+            <div class="title">
+                <h1>Tastee!</h1>
+            </div>
+            <div class="sections">
+                <form id="myform" action="/slide" method="post">
+                    <input type="hidden" id="actionInput" name="action" value="">
+                    <ul>
+                        <li onclick="document.getElementById('actionInput').value='Home'; document.getElementById('myform').submit();">Home</li>
+                        <li onclick="document.getElementById('actionInput').value='About'; document.getElementById('myform').submit();">About us</li>
+                        <li onclick="document.getElementById('actionInput').value='Blog'; document.getElementById('myform').submit();">Blog</li>
+                        <li onclick="document.getElementById('actionInput').value='Contact'; document.getElementById('myform').submit();">Contact us</li>
+                        <button class="signup">Sign up</button>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <div class="content">
+            <div class="text">
+                <h1 style="margin-bottom: 40px; line-height: 60px;">
+                    Share Your Favorite Recipes with <br>
+                    <span style="color: #F72D57;">Our Community</span>
+                </h1>
+                <p>Love cooking? Share your favorite recipes with our community and inspire others to create delicious dishes! Whether it’s a family secret or a quick snack, we want to hear from you.</p>
+                <form action="/share" method="post">
+                <button class="show_button">Share Recipe</button>
+            </form>
+            </div>
+            <div class="content_img">
+                <img style="height: 80%; padding-left: 20%; background-image: none;" src="_freepicdownloader.com_-3d-illustration-cartoon-character-with-hamburger-his-hand-large-removebg-preview.png" alt="food_img">
+            </div>
+        </div>
+    </div>
+
+    <div class="reciepes">
+        <div class="blog_form_div" style="height: 10%; width: 40%; margin-bottom: 30px;">
+            <form action="/blogsearch" method="get" class="blog_form">
+                <input type="text" name="Search" class="search" placeholder="Search recipes...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        
+        <% if (ele && ele.length > 0) { %> 
+            <% ele.forEach(element => { %>
+                <form action="/reciepe" method="post" class="reciepe_form">
+                    <div class="cards">
+                        <div class="cont">
+                            <h2 style="color: #F72D57;"><%= element.recipeName %></h2>
+                            <% 
+                            const preparationStepsWords = element.preparationSteps.split(" "); 
+                            const shortPreparationSteps = preparationStepsWords.slice(0, 80).join(" "); 
+                            %>
+                            <p><%= shortPreparationSteps %><%= preparationStepsWords.length > 80 ? '...' : '' %></p>
+                            <button type="submit" name="foodname" value="<%= element.tag %>">Read more</button>
+                        </div>
+                        <img src="<%= element.photo %>" alt="photo" style="height: 60%;">
+                    </div>
+                </form>
+            <% }) %>
+        <% } else { %>
+            <p>No recipes found.</p> 
+        <% } %>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
