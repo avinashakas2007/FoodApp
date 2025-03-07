@@ -89,7 +89,7 @@ npm install
 Run the app using this command:
 
 ```bash
-npm start
+node app.js
 ```
 
 Visit `http://localhost:3000` to see the platform in action.
